@@ -1,5 +1,4 @@
 import BlackBitMark from "@/components/BlackBitMark";
-import CertificateActions from "@/components/CertificateActions";
 import DownloadCertificateButton from "@/components/DownloadCertificateButton";
 import { db } from "@/lib/firebaseAdmin";
 import { QRCodeSVG } from "qrcode.react";

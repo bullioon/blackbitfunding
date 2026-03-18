@@ -1,7 +1,6 @@
 import BlackBitMark from "@/components/BlackBitMark";
 import { db } from "@/lib/firebaseAdmin";
 import Link from "next/link";
-import DownloadCertificateButton from "@/components/DownloadCertificateButton";
 
 type VerifyPageProps = {
   params: Promise<{ id: string }>;
@@ -212,6 +211,7 @@ export default async function VerifyCertificatePage({
       </div>
 
       {/* ACTIONS */}
+      
 <div className="mt-6 flex justify-center gap-3">
   <Link
     href={`/certificate/${id}`}
