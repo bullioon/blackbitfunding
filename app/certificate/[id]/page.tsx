@@ -65,7 +65,6 @@ export default async function CertificatePage({ params }: Props) {
 
   const isFunded = cert.template === "funded-access";
   const isPerformance = cert.template === "performance-certificate";
-  const isEvaluation = !isFunded && !isPerformance;
 
   const accentText = isFunded
     ? "text-emerald-300"
@@ -115,11 +114,7 @@ export default async function CertificatePage({ params }: Props) {
       ? `${cert.winRate || "71% WIN RATE"} · ${cert.period || "30 DAYS"}`
       : `${cert.accountSize} · VERIFIED · ${cert.issuedAt}`;
 
-  const secondaryMeta = isFunded
-    ? cert.activationDate || cert.issuedAt
-    : isPerformance
-      ? cert.issuedAt
-      : cert.issuedAt;
+  const secondaryMeta = cert.activationDate || cert.issuedAt;
 
   const stampText = isFunded
     ? "FUNDED VERIFIED"
@@ -143,17 +138,17 @@ export default async function CertificatePage({ params }: Props) {
 
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_14%,rgba(255,255,255,0.05),transparent_30%),radial-gradient(circle_at_80%_25%,rgba(255,255,255,0.03),transparent_24%)]" />
 
-         <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
-  <div className="relative opacity-[0.06]">
-    <div className="absolute inset-0 blur-[18px]">
-      <BlackBitMark className="h-[280px] w-[280px] text-emerald-300/20 md:h-[420px] md:w-[420px]" />
-    </div>
+          <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
+            <div className="relative opacity-[0.06]">
+              <div className="absolute inset-0 blur-[18px]">
+                <BlackBitMark className="h-[280px] w-[280px] text-emerald-300/20 md:h-[420px] md:w-[420px]" />
+              </div>
 
-    <div className="relative">
-      <BlackBitMark className="h-[280px] w-[280px] text-white/[0.05] md:h-[420px] md:w-[420px]" />
-    </div>
-  </div>
-</div>
+              <div className="relative">
+                <BlackBitMark className="h-[280px] w-[280px] text-white/[0.05] md:h-[420px] md:w-[420px]" />
+              </div>
+            </div>
+          </div>
 
           <div className="relative grid min-h-[820px] gap-14 p-6 md:grid-cols-[1fr_470px] md:p-12">
             <div className="flex flex-col justify-between">
@@ -165,7 +160,9 @@ export default async function CertificatePage({ params }: Props) {
                     <div className="text-[11px] uppercase tracking-[0.42em] text-white/45">
                       BLACKBIT REGISTRY
                     </div>
-                    <div className={`mt-3 text-sm uppercase tracking-[0.34em] ${accentText}`}>
+                    <div
+                      className={`mt-3 text-sm uppercase tracking-[0.34em] ${accentText}`}
+                    >
                       {headerTag}
                     </div>
                   </div>
@@ -180,14 +177,18 @@ export default async function CertificatePage({ params }: Props) {
                     {cert.traderName}
                   </div>
 
-                  <div className={`mt-8 h-px max-w-3xl bg-gradient-to-r ${accentLine}`} />
+                  <div
+                    className={`mt-8 h-px max-w-3xl bg-gradient-to-r ${accentLine}`}
+                  />
 
                   <div className="mt-10">
                     <div className="text-[10px] uppercase tracking-[0.3em] text-white/32">
                       {heroLabel}
                     </div>
 
-                    <div className={`mt-3 text-5xl font-semibold tracking-[-0.06em] md:text-7xl ${accentText}`}>
+                    <div
+                      className={`mt-3 text-5xl font-semibold tracking-[-0.06em] md:text-7xl ${accentText}`}
+                    >
                       {heroMetric}
                     </div>
 
@@ -226,7 +227,9 @@ export default async function CertificatePage({ params }: Props) {
                     <div className="text-[10px] uppercase tracking-[0.28em] text-white/32">
                       Status
                     </div>
-                    <div className={`mt-3 text-sm font-semibold tracking-[0.18em] ${accentText}`}>
+                    <div
+                      className={`mt-3 text-sm font-semibold tracking-[0.18em] ${accentText}`}
+                    >
                       {stampText}
                     </div>
                   </div>
@@ -236,11 +239,15 @@ export default async function CertificatePage({ params }: Props) {
 
             <div className="flex flex-col justify-center">
               <div className="relative rounded-[36px] border border-white/10 bg-white/[0.04] p-6 backdrop-blur-md">
-                <div className={`pointer-events-none absolute inset-0 rounded-[36px] blur-[80px] ${accentGlow}`} />
+                <div
+                  className={`pointer-events-none absolute inset-0 rounded-[36px] blur-[80px] ${accentGlow}`}
+                />
 
                 <div className="relative">
                   <div className="mb-6 text-center">
-                    <div className={`text-[10px] uppercase tracking-[0.34em] ${accentText}`}>
+                    <div
+                      className={`text-[10px] uppercase tracking-[0.34em] ${accentText}`}
+                    >
                       VERIFICATION PORTAL
                     </div>
                     <div className="mt-3 text-sm text-white/42">
@@ -273,7 +280,9 @@ export default async function CertificatePage({ params }: Props) {
                       <div className="text-[10px] uppercase tracking-[0.28em] text-white/30">
                         Verification
                       </div>
-                      <div className={`mt-3 text-sm font-semibold tracking-[0.18em] ${accentText}`}>
+                      <div
+                        className={`mt-3 text-sm font-semibold tracking-[0.18em] ${accentText}`}
+                      >
                         {stampText}
                       </div>
                     </div>
