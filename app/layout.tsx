@@ -12,10 +12,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "BlackBit Terminal",
   description: "BlackBit Funded Trading Dashboard",
-
   icons: {
     icon: "/icon.png",
     shortcut: "/icon.png",
