@@ -432,7 +432,7 @@ export default function DashboardPage() {
                   <div className="mt-5 grid gap-3">
                     <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4">
                       <div className="text-[10px] uppercase tracking-[0.22em] text-white/30">
-                        Today's Permitted Loss
+                        Today&apos;s Permitted Loss
                       </div>
                       <div className="mt-2 text-2xl font-semibold text-white">
                         $5,000
@@ -449,9 +449,9 @@ export default function DashboardPage() {
                     </div>
 
                     <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4">
-                      <div className="text-[10px] uppercase tracking-[0.22em] text-white/30">
-                        Today's Profit
-                      </div>
+                     <div className="text-[10px] uppercase tracking-[0.22em] text-white/30">
+  Today&apos;s Profit
+</div>
                       <div className="mt-2 text-2xl font-semibold text-emerald-300">
                         +$640
                       </div>
